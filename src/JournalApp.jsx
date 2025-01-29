@@ -2,6 +2,8 @@ import React from 'react'
 
 export const JournalApp = () => {
   return (
-    <div>JournalApp</div>
+    <>
+        <h1>Hola Mundo</h1>
+    </>
   )
 }
