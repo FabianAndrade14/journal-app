@@ -1,6 +1,7 @@
 # JournalApp - The Daily Bases
 > [!IMPORTANT]
 > Developed by Dev. Fabian Andrade
+
 This project is like a dairy to every aspect in the users life, posting and saving the most private aspects on their daily life.
 
 > [!NOTE]
