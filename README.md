@@ -1,8 +1,19 @@
-# React + Vite
+# JournalApp - The Daily Bases
+> [!IMPORTANT]
+> Developed by Dev. Fabian Andrade
+This project is like a dairy to every aspect in the users life, posting and saving the most private aspects on their daily life.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> [!NOTE]
+> This project is just one of a series of ideas to create a new portfolio
 
-Currently, two official plugins are available:
+For using this project, you need to follow this steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. This app is using yarn as the package manager. So to install all the dependencies, you need to execute the following command.
+
+```
+yarn install
+```
+2. To run this project you need to execute this command.
+```
+yarn dev
+```
