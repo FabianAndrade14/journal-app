@@ -1,3 +1,4 @@
+![Sprite of a dairy](https://drive.google.com/file/d/1u1r9k3Twkwez7btW1NXndMwba5Ib6vDH/view?usp=sharing)
 # JournalApp - The Daily Bases
 > [!IMPORTANT]
 > Developed by Dev. Fabian Andrade
