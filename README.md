@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > Developed by Dev. Fabian Andrade
 
-This project is like a dairy to every aspect in the users life, posting and saving the most private aspects on their daily life.
+This project is like a dairy to every aspect in the users life, posting and saving the most private aspects on their daily life. This project uses material ui for the frontend.
 
 > [!NOTE]
 > This project is just one of a series of ideas to create a new portfolio
