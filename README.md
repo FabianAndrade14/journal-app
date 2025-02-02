@@ -19,3 +19,4 @@ yarn install
 ```
 yarn dev
 ```
+Update to the project: the next week the app is going to have a firebase implementation and also using redux to the backend.
