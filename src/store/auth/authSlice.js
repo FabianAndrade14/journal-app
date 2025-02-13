@@ -18,7 +18,7 @@ export const authSlice = createSlice({
             
         },
         checkingCredentials: ( state, action ) => {
-            
+            state.status = 'checking';
         },
     }
 });
