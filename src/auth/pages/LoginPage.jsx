@@ -5,6 +5,12 @@ import { AuthLayout } from '../Layout/AuthLayout';
 
 
 export const LoginPage = () => {
+
+  const { email, password, onInputChange } = useForm({
+    email: 'fabian@google.com',
+    password: '1234567'
+  });
+
   return (
     <AuthLayout title="Inicio de sesión">
 
