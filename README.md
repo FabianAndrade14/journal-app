@@ -21,4 +21,4 @@ yarn dev
 ```
 Update to the project: the next week the app is going to have a firebase implementation and also using redux to the backend.
 
-after you use the command to run the project, will notice the use of a firebase based login.
+after you use the command to run the project, will notice the use of a firebase based login; this can be used to login using a google authentication and also the email and password login using as regular.
