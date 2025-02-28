@@ -82,10 +82,11 @@ export const LoginPage = () => {
             <Grid item xs={12} sm={6}>
               <Button
                 disabled={isAuthenticating}
-                type='submit'
+                type="submit"
                 variant='contained'
                 fullWidth
-                onClick={onSubmit}>
+                onClick={onSubmit}
+                >
                 Login
               </Button>
             </Grid>
