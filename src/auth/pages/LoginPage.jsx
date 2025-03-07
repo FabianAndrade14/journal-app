@@ -36,7 +36,7 @@ export const LoginPage = () => {
   return (
     <AuthLayout title="Inicio de sesión">
 
-      <form>
+      <form onSubmit={ onSubmit } className='animate__animated animate__fadeIn animate__faster' >
         <Grid container>
 
           {/* Login form */}

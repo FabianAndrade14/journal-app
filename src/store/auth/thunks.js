@@ -1,6 +1,6 @@
 import { Login } from "@mui/icons-material";
 import { checkingCredentials, login, logout } from "./";
-import { loginWithEmailPassword, registerUserWithEmailPassword, signInWithGoogle } from '../../firebase/providers';
+import { loginWithEmailPassword, logoutFirebase, registerUserWithEmailPassword, signInWithGoogle } from '../../firebase/providers';
 
 export const checkingAuthentication = () => {
     return async( dispatch ) => {
@@ -48,5 +48,15 @@ export const startLoginWithEmailPassword = ({ email, password }) => {
         if( !result.ok ) return dispatch( logout( result ));
 
         dispatch( login( result ))
+    }
+}
+
+export const startLogout = () => {
+    return async( dispatch ) => {
+
+        await logoutFirebase();
+
+        dispatch( logout() );
+
     }
 }
