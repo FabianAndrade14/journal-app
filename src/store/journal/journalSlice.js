@@ -23,11 +23,25 @@ export const journalSlice = createSlice({
 
         },
         setNotes: (state, action) => {
-            
+
+        },
+        setSaving: ( state ) => {
+
+        },
+        updateNotes: (state, action) => {
+
+        },
+        deleteNodeById: (state, action) => {
+
         }
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { increment } = journalSlice.actions;
+export const { addNewEmptyNote,
+setActiveNote,
+setNotes,
+setSaving,
+updateNotes,
+deleteNodeById } = journalSlice.actions;
