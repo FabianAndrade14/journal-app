@@ -113,8 +113,18 @@ export const NoteView = () => {
                     onChange={ onInputChange }
                 />
 
+                <Grid container justifyContent='end'>
+                    <Button
+                        onClick={ onDelete }
+                        sx={{ mt: 2 }}
+                        color="error"
+                    >
+                        <DeleteOutline>Borrar</DeleteOutline>
+                    </Button>
+                </Grid>
+
                 {/* Galería de imágenes */}
-                <ImageGallery></ImageGallery>
+                <ImageGallery images={ note.imageUrls }></ImageGallery>
 
             </Grid>
         </Grid>
