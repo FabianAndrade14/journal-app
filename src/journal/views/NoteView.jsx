@@ -1,11 +1,11 @@
-import { SaveOutlined } from "@mui/icons-material"
-import { Button, Grid, TextField, Typography } from "@mui/material"
+import { SaveOutlined, UploadOutlined } from "@mui/icons-material"
+import { Button, Grid, IconButton, TextField, Typography } from "@mui/material"
 import { ImageGallery } from "../components"
 import { useDispatch, useSelector } from "react-redux"
 import { useForm } from '../../hooks'
 import { useEffect, useMemo, useRef } from "react"
 import { setActiveNote } from "../../store/journal/journalSlice"
-import { startSaveNote } from "../../store/journal/thunks"
+import { startSaveNote, startUploadingFiles } from "../../store/journal/thunks"
 import Swal from "sweetalert2"
 import 'sweetalert2/dist/sweetalert2.css'
 
@@ -42,8 +42,7 @@ export const NoteView = () => {
 
     const onFileInputChange = ({ target }) => {
         if( target.files === 0 ) return;
-
-        console.log('Subiendo archivos');
+        dispatch( startUploadingFiles( target.files ));
         
     }
 
