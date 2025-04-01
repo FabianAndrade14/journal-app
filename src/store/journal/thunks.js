@@ -11,20 +11,34 @@ export const startNewNote = () => {
         
         const { uid } = getState().auth;
 
-        const newNote = {
-            title: '',
-            body: '',
-            date: new Date().getTime()
+        if(!uid) {
+            console.error("Error: No se encontró el UID del usuario.");
+            return;
         }
 
-        const newDoc = doc( collection( FirebaseDB, `${ uid }/journal/notes` ));
-        await setDoc( newDoc, newNote);
+        const newNote = {
+            title: "New Note",
+            body: "Write something...",
+            imageUrls: [],
+            date: new Date().getTime()
+        };
+        
+        try {
 
-        newNote.id = newDoc.id;
+            const newDoc = doc( collection( FirebaseDB, `${ uid }/journal/notes` ));
+            await setDoc( newDoc, newNote);
+    
+            newNote.id = newDoc.id;
+    
+            //! dispatch
+            dispatch( addNewEmptyNote( newNote ));
+            dispatch( setActiveNote( newNote ));
 
-        //! dispatch
-        dispatch( addNewEmptyNote( newNote ));
-        dispatch( setActiveNote( newNote ));
+        } catch (error) {
+            console.error("Error al guardar la nueva nota:", error);
+        }
+
+
         
     }
 
@@ -50,11 +64,22 @@ export const startSaveNote = () => {
         const { uid } = getState().auth;
         const { active:note } = getState().journal;
 
+        if (!note || !note.id || !uid) {
+            console.error("Error: La nota activa o el UID están vacíos");
+            return;
+        }
+
         const noteToFireStore = { ...note };
         delete noteToFireStore.id;
 
-        const docRef = doc( FirebaseDB, `${ uid }/journal/notes/${ note.id }`);
-        await setDoc( docRef, noteToFireStore, { merge: true} );
+        try {
+            const docRef = doc( FirebaseDB, `${ uid }/journal/notes/${ note.id }`);
+            await setDoc( docRef, noteToFireStore, { merge: true} );
+
+            dispatch( updateNotes(note) );
+        } catch (error) {
+            console.error("Error al actualizar la nota en Firestore:", error);
+        }
         
         dispatch( updateNotes( note ));
     }

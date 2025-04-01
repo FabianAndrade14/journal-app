@@ -113,6 +113,7 @@ export const NoteView = () => {
                     multiline
                     placeholder="¿Qué sucedió en el día de hoy?"
                     minRows={5}
+                    name="body"
                     value={ body }
                     onChange={ onInputChange }
                 />
